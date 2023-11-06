@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1a1a1a; /* Dark background color */
+    color: #ffffff; /* Text color */
+}
+
+.warning {
+    text-align: center;
+    max-width: 400px; /* Set maximum width for the warning */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: #333; /* Darker background for the warning */
+    border-radius: 10px; /* Rounded corners for the warning */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for a subtle lift effect */
+}
+
+.warning h2 {
+    font-size: 24px; /* Larger font size for the heading */
+}
+
+.warning p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#proceedBtn {
+    background-color: #4caf50; /* Green button color */
+    color: #ffffff;
+    padding: 15px 30px; /* Larger padding for the button */
+    font-size: 18px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#proceedBtn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.random-number-container {
+    display: none;
+    margin-top: 20px;
+    font-size: 72px; /* Very large font size */
+    text-align: center; /* Center align the text */
+    font-family: 'Arial Rounded MT Bold', sans-serif; /* Rounded font */
+}
