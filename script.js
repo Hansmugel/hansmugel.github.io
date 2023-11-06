@@ -15,6 +15,30 @@ function generateRandomNumber(userToken) {
   return randomNumber;
 }
 
+// Function to hide the warning and show the random number container
+function hideWarning() {
+  const warning = document.querySelector('.warning');
+  const randomNumberContainer = document.querySelector('.random-number-container');
+
+  warning.style.display = 'none';
+  randomNumberContainer.style.display = 'block';
+}
+
+// Event listener for the "Proceed" button
+document.getElementById('proceedBtn').addEventListener('click', function() {
+  hideWarning();
+
+  // Generate user token and use it to generate the random number
+  const userToken = getUserToken();
+  const randomNumber = generateRandomNumber(userToken);
+
+  // Display the random number on the site
+  document.getElementById('randomNumber').textContent = randomNumber;
+
+  // Call the function to track and store the visit count
+  trackVisitCount();
+});
+
 // Function to track and store the visit count
 function trackVisitCount() {
   let visitCount = localStorage.getItem("visitCount");
@@ -28,7 +52,7 @@ const userToken = getUserToken();
 const randomNumber = generateRandomNumber(userToken);
 
 // Display the random number on the site
-document.getElementById("randomNumber").textContent = randomNumber;
+document.getElementById('randomNumber').textContent = randomNumber;
 
 // Call the function to track and store the visit count
 trackVisitCount();
