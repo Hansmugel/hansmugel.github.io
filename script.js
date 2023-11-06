@@ -47,12 +47,5 @@ function trackVisitCount() {
   console.log("Site has been opened " + visitCount + " times.");
 }
 
-// Generate user token and use it to generate the random number
-const userToken = getUserToken();
-const randomNumber = generateRandomNumber(userToken);
-
-// Display the random number on the site
-document.getElementById('randomNumber').textContent = randomNumber;
-
 // Call the function to track and store the visit count
 trackVisitCount();
